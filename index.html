@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servirn - Jasa Desain & Website</title>
+  <link rel="icon" href="assets/icon/logo.png" type="image/png">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href="/styles/main.css" rel="stylesheet">
+  <meta name="description"
+  content="Servirn adalah layanan jasa design dan pembuatan website sederhana profesional, cepat, tepat waktu dan berkualitas." />
+  <meta name="keywords" content="jasa desain & website, jasadesain, jasawebsite, jasa,  website, desain, web, ui/ux, pembuatan web, Servirn, service">
+  <meta name="author" content="Servirn">
+  <!-- Flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            darkcolor: '#2B99FF',
+            morelight: '#9DE2FF',
+            lightblue: '#00C7EE', //blue
+            whiteblue: '#EDF4FA',
+            darkgray: '#334155', // darkgray_parapgraph
+            lightgray: '#F1F1F1',
+            slightblue: '#EBF8FC',
+            darkblue: '#1B2A40',
+            smoothgray: "#F6F6F6",
+            white: '#fff',
+            limegreen: "#25D366"
+          },
+          fontSize: {
+            title: '50px',
+            mobiletitle: '40px'
+          },
+          dropShadow: {
+            general: '-15px 0px 65px rgba(55, 55, 55, 0.08)',
+            card: '0px 24px 44px rgba(0, 0, 0, 0.04)',
+            kartu: '0px 24px 44px -8px rgba(0,0,0,0.18)',
+          },
+          boxShadow: {
+            card: '0px 26px 44px -8px rgba(0,0,0,0.09)',
+            general: '-15px 0px 65px rgba(55, 55, 55, 0.05)',
+            kartu: '0px 24px 44px -8px rgba(0,0,0,0.18)',
+            chat: '-20px 25px 65px rgba(55, 55, 55, 0.05)',
+            testi: '10px 24px 44px -8px rgba(0,0,0,0.18)',
+          },
+          padding: {
+            step: '1.63rem'
+          },
+          height: {
+            carousel: '26rem',
+          },
+          borderRadius: {
+            '4xl': '2rem' 
+          },
+          screens: {
+            'tutorial': '2004px'
+          },
+          animation: {
+            modal: '500ms modal',
+          },
+          keyframes: {
+            'modal': {
+              '0%': {transform: 'scale(0)'},
+              '100%': {transform: 'scale(1)'}
+              
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="overflow-x-hidden">
+  <!-- Navbar -->
+  <div class="px-6 pt-6 lg:px-8">
+    <nav id="navbar-home" class="px-2 sm:px-4 fixed py-2.5 w-full z-50 top-0 left-0">
+      <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="/index.html" class="flex items-center">
+          <img src="assets/brand.png" class="h-6 mr-3 sm:h-9" alt="brand Logo" />
+        </a>
+        <div class="flex md:order-2 float-right">
+          <button type="button"
+            class="bg-darkcolor text-white flex items-center focus:outline-none font-medium rounded-full text-sm px-2.5 sm:px-5 py-2.5 text-center mr-3 md:mr-0">
+            <iconify-icon icon="ic:baseline-whatsapp" width="20" height="20"></iconify-icon>
+            <span class="hidden sm:block ml-2.5">0896 3087 3931</span>
+          </button>
+          <button data-collapse-toggle="navbar-sticky" type="button"
+            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul
+            class="flex flex-col p-4 mt-4 rounded-lg bg-gray-50 md:bg-transparent md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 text-white">
+            <li>
+              <a href="/index.html"
+                class="block py-2 pl-3 pr-4  rounded md:p-0 font-medium text-gray-700 md:hover:text-darkcolor"
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                class="">
+                <a href="#layanan-kami" class="flex items-center text-gray-700 justify-between w-full rounded font-medium md:border-0 md:hover:text-darkcolor md:w-auto py-2 pl-3 pr-4 md:p-0">
+                  Layanan Kami
+                <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                </a>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar"
+                class="z-10 hidden font-normal w-[11rem] bg-white px-[27px] py-3  rounded-xl md:r mdned-noned:rounded-b-xl md:w-[11rem]">
+                <!-- <div class="bg-darkcolor w-full py-0.5"></div> -->
+                <ul class="py-2 text-sm text-darkgray space-y-5 flex flex-col" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="/pages/design.html" class="block hover:text-darkcolor">Jasa Design</a>
+                  </li>
+                  <li>
+                    <a href="/pages/website.html" class="block hover:text-darkcolor">Jasa Pembuatan Website</a>
+                  </li>
+                </ul>
+              </div>
+              
+            </li>
+            <li>
+              <a href="#portfolio"
+                class="block py-2 pl-3 pr-4  rounded md:p-0 font-medium text-gray-700  md:hover:text-darkcolor">Portfolio</a>
+            </li>
+            <li>
+              <a href="#faq"
+                class="block py-2 pl-3 pr-4  rounded md:p-0 font-medium text-gray-700  md:hover:text-darkcolor">FAQ</a>
+            </li>
+            <li>
+              <a href="#contact"
+                class="block py-2 pl-3 pr-4  rounded md:p-0 font-medium text-gray-700  md:hover:text-darkcolor">Hubungi
+                Kami</a>
+            </li>
+          </ul>
+      </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- Home -->
+  <section id="home">
+    <div class="relative px-6 lg:px-8">
+      <div class="mx-auto max-w-5xl py-44">
+        <div class="text-center flex justify-center items-center flex-col">
+          <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-6xl">Jasa Pembuatan <span
+              class="text-darkcolor ">Desain & Website</span> Mudah dan Berkualitas
+          </h1>
+          <p class="mt-6 text-md sm:text-lg  leading-8 text-gray-600 max-w-2xl ">Servirn adalah layanan jasa design
+            dan
+            pembuatan website sederhana profesional, cepat, tepat waktu dan berkualitas.</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#layanan-kami"
+              class="rounded-md bg-darkcolor   px-8 py-3 text-base font-semibold leading-7 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-0 top-[calc(100%-20rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-20 lg:left-[-150rem] sm:opacity-20">
+        <svg
+          class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+          viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
+          <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"
+            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+          <defs>
+            <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177" y2="474.645"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00C7EE" />
+              <stop offset="1" stop-color="9DE2FF" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>  
+  </section>
+  <!-- Home End-->
+
+  <!-- Layanan Kami -->
+  <section id="layanan-kami" class="bg-whiteblue py-24">
+    <div class="">
+      <div class="flex justify-center items-center flex-col mb-14">
+        <span class="bg-white text-darkcolor uppercase text-sm font-medium px-8 py-3 rounded-full">design &
+          website</span>
+        <h1 class="font-extrabold text-mobiletitle md:text-title text-medium text-center">Layanan Kami</h1>
+        <p class="text-center ">Menyediakan berbagai macam layanan desain yang lengkap</p>
+      </div>
+      <!-- content -->
+      <div class="flex justify-center items-center mt-5 container mx-auto">
+        <div class="flex flex-col md:flex-row space-y-5 m-2 lg:m-0 md:space-y-0 md:space-x-8">
+
+          <div class="max-w-lg py-6 px-8 bg-white rounded-xl space-y-4 flex-col">
+            <div class="flex items-center space-x-4">
+              <div class="bg-slightblue inline-block rounded-full p-4"><img src="assets/icon/design.png" class="w-7 h-7"
+                  alt="jasa design"></div>
+              <h5 class="mb-2 text-xl font-extrabold tracking-tight text-gray-900">Jasa Design</h5>
+            </div>
+            <p class="mb-3 font-normal text-darkgray text-justify min-h-[100px]">Kami menyediakan layanan untuk pembuatan desain berbagai macam meliputi website, aplikasi, kalender, banner, kartu nama, brosur, label produk, dan amplop</p>
+            <a href="/pages/design.html"
+              class="inline-flex mt-auto items-center px-5 py-3 text-sm font-medium text-center text-white bg-darkcolor rounded-lg hover:bg-blue-500  focus:outline-none">
+              Selengkapnya
+              <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="max-w-lg py-6 px-8 bg-white rounded-xl space-y-4 flex-col">
+            <div class="flex items-center space-x-4">
+              <div class="bg-slightblue inline-block rounded-full p-4"><img src="assets/icon/website.png" class="w-7 h-7" alt="jasa pembuatan website"></div>
+              <h5 class="mb-2 text-xl font-extrabold tracking-tight text-gray-900">Jasa Pembuatan Website</h5>
+            </div>
+            <p class="mb-3 font-normal text-darkgray text-justify min-h-[100px]">Kami menyediakan layanan untuk pembuatan website
+              responsive yang digunakan untuk media promosi online berbentuk halaman
+              di media internet meliputi website produk, jasa, perusahaan, dll.</p>
+            <a href="pages/website.html"
+              class="inline-flex mt-auto items-center px-5 py-3 text-sm font-medium text-center text-white bg-darkcolor rounded-lg hover:bg-blue-500 focus:outline-none ">
+              Selengkapnya
+              <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Layanan Kami end -->
+
+  <!-- Promosi 1 -->
+  <section id="promosi-1" class="overflow-hidden bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 gap-x-8 sm:gap-y-32 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="lg:pr-8 lg:pt-16">
+          <div class="lg:max-w-lg">
+            <span
+              class="bg-whiteblue text-darkcolor uppercase text-sm font-medium  mr-2 my-6 px-8 py-3 leading-8 tracking-tight rounded-full">TERBAIK</span>
+            <p class="mt-5 text-3xl font-extrabold tracking-tight text-darkgray sm:text-5xl">Coba layanan kami bebas
+              resiko</p>
+            <p class="text-lg leading-8 text-gray-600 my-6">Tidak seperti layanan lain, Anda hanya membayar setelah siap
+              diluncurkan. Jadi Anda dapat mencoba kami sepenuhnya bebas
+              risiko!</p>
+            <button class="my-4"><a href="#"
+                class="leading-7 text-darkcolor bg-whiteblue py-4 px-6 rounded-md font-medium">Hubungi Kami</a></button>
+          </div>
+        </div>
+        <img src="https://cdn.discordapp.com/attachments/902191817028681729/1073988695776055327/gambar1.png"
+          class="w-[48rem] h-max sm:w-[57rem] md:-ml-4 lg:-ml-0">
+      </div>
+    </div>
+  </section>
+  <!-- Promosi 1 End -->
+
+  <!-- Promosi 2 -->
+  <section id="promosi-2" class="overflow-hidden bg-whiteblue py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-32 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <img
+          src="https://cdn.discordapp.com/attachments/1073999865702531162/1073999930496123041/design-_yu0MRH4j-transformed-removebg-preview_1.png"
+          class="w-[48rem] h-max sm:w-[57rem] md:-ml-4 lg:-ml-0">
+        <div class="lg:pr-8 lg:pt-12">
+          <div class="lg:max-w-2xl">
+            <span class="bg-white text-darkcolor uppercase text-sm font-medium px-8 py-3 rounded-full">design &
+              website</span>
+            <p class="mt-8 text-3xl font-extrabold tracking-tight text-darkgray sm:text-5xl">Hasil cepat, berkualitas,
+              dan profesional</p>
+            <p class="text-lg leading-8 text-gray-600 my-6">Tim kami bekerja secara profesional di layanan kami membuat
+              hasil proyek kebutuhan anda menjadi lebih cepat, maksmimal
+              dan memuaskan</p>
+            <button class="my-4"><a href="#"
+                class="leading-7 text-darkcolor bg-white py-4 px-6 my-16 rounded-md font-medium ">Hubungi
+                Kami</a></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Promosi 2 End -->
+
+  <!-- Kelebihan -->
+  <section id="kelebihan" class="bg-white py-20"
+    style="background: url(assets/rectangle.png) ; background-size: 60%; background-repeat: no-repeat;  background-position: center;  background-position-y: 18rem;">
+    <div class="container mx-auto px-2 md:px-4">
+      <div class="flex justify-center items-center flex-col mb-14">
+        <span class="bg-whiteblue text-darkcolor uppercase text-sm font-medium px-8 py-3 rounded-full">kelebihan</span>
+        <h1 class="font-extrabold text-mobiletitle md:text-title text-medium text-center">Mengapa harus Servirn?</h1>
+        <p class="text-center">Menyediakan berbagai macam layanan yang lengkap mulai dari desain sampai membuat website
+        </p>
+      </div>
+      <!-- card row 1-->
+      <div class="flex justify-center items-center mt-5">
+        <div class="flex flex-col md:flex-row space-y-5 m-2 lg:m-0 md:space-y-0 md:space-x-6  ">
+          <div class="max-w-[21rem]  py-10 px-8 bg-white space-y-4  shadow-card rounded-xl flex-col">
+            <div class="">
+              <!-- <div class="bg-slightblue inline-block rounded-full p-4"><img src="assets/icon/design.png" class="w-7 h-7"
+                    alt="jasa design"></div> -->
+              <div class="bg-slightblue rounded-full p-5 w-fit flex items-center">
+                <iconify-icon icon="heroicons:light-bulb-solid" class="text-darkcolor" width="25"
+                  height="25"></iconify-icon>
+              </div>
+              <h5 class="text-2xl my-3 font-extrabold tracking-tight text-gray-900">Kreatif</h5>
+            </div>
+            <p class="mb-3 font-normal text-darkgray text-justify">Tim yang berpengalaman dan kreatif siap membantu
+              segala kebutuhan anda dengan desain yang sangat berinovasi
+            </p>
+          </div>
+
+          <div class="max-w-[21rem] py-10 px-8 bg-white shadow-card rounded-xl space-y-4 flex-col">
+            <div class="">
+              <!-- <div class="bg-slightblue inline-block rounded-full p-4"><img src="assets/icon/design.png" class="w-7 h-7"
+                    alt="jasa design"></div> -->
+              <div class="bg-slightblue rounded-full p-5 w-fit flex items-center">
+                <iconify-icon icon="ic:baseline-access-time-filled" class="text-darkcolor" width="25"
+                  height="25"></iconify-icon>
+              </div>
+              <h5 class="text-2xl my-3 font-extrabold tracking-tight text-gray-900">Tepat Waktu</h5>
+            </div>
+            <p class="mb-3 font-normal text-darkgray text-justify">Tim kami mengerjakan semua kebutuhan anda dengan
+              cepat dan sesuai dengan waktu yang disediakan
+            </p>
+          </div>
+
+          <div class="max-w-[21rem] py-10 px-8 bg-white shadow-card rounded-xl space-y-4 flex-col">
+            <div class="">
+              <!-- <div class="bg-slightblue inline-block rounded-full p-4"><img src="assets/icon/design.png" class="w-7 h-7"
+                    alt="jasa design"></div> -->
+              <div class="bg-slightblue rounded-full p-5 w-fit flex items-center">
+                <iconify-icon icon="ri:money-dollar-circle-fill" class="text-darkcolor" width="25"
+                  height="25"></iconify-icon>
+              </div>
+              <h5 class="text-2xl my-3 font-extrabold tracking-tight text-gray-900">Hemat Biaya</h5>
+            </div>
+            <p class="mb-3 font-normal text-darkgray text-justify">Anda tidak perlu mengeluarkan biaya yang sangat besar
+              untuk mendapatkan layanan produk berkualitas kami
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- card row 1 end-->
+
+      <!-- card row 2-->
+      <div class="flex justify-center items-center my-6">
+        <div class="flex flex-col md:flex-row space-y-5 m-2 lg:m-0 md:space-y-0 md:space-x-6">
+          <div class="max-w-[21rem] py-10 px-8 bg-white shadow-card rounded-xl flex-col">
+            <div class="">
+              <!-- <div class="bg-slightblue inline-block rounded-full p-4"><img src="assets/icon/design.png" class="w-7 h-7"
+                    alt="jasa design"></div> -->
+              <div class="bg-slightblue rounded-full p-5 w-fit flex items-center">
+                <iconify-icon icon="ic:baseline-discount" class="text-darkcolor" width="25" height="25"></iconify-icon>
+              </div>
+              <h5 class="text-2xl my-3 font-extrabold tracking-tight text-gray-900">Diskon</h5>
+            </div>
+            <p class="mb-3 font-normal text-darkgray text-justify">Kami menyediakan diskon khusus bagi para pelanggan
+              yang setia membeli produk kami
+            </p>
+          </div>
+
+          <div class="max-w-[21rem] py-10 px-8 bg-white shadow-card rounded-xl space-y-4 flex-col">
+            <div class="">
+              <!-- <div class="bg-slightblue inline-block rounded-full p-4"><img src="assets/icon/design.png" class="w-7 h-7"
+                    alt="jasa design"></div> -->
+              <div class="bg-slightblue rounded-full p-5 w-fit flex items-center">
+                <iconify-icon icon="material-symbols:file-copy-rounded" class="text-darkcolor" width="25"
+                  height="25"></iconify-icon>
+              </div>
+              <h5 class="text-2xl my-3 font-extrabold tracking-tight text-gray-900">File Lengkap</h5>
+            </div>
+            <p class="mb-3 font-normal text-darkgray text-justify">File master yang kami berikan lengkap dan mudah dalam
+              melakukan editing.
+            </p>
+          </div>
+
+          <div class="max-w-[21rem] py-10 px-8 bg-white shadow-card rounded-xl space-y-4 flex-col">
+            <div class="">
+              <!-- <div class="bg-slightblue inline-block rounded-full p-4"><img src="assets/icon/design.png" class="w-7 h-7"
+                    alt="jasa design"></div> -->
+              <div class="bg-slightblue rounded-full p-5 w-fit flex items-center">
+                <iconify-icon icon="ri:star-smile-fill" class="text-darkcolor" width="25" height="25"></iconify-icon>
+              </div>
+              <h5 class="text-2xl my-3 font-extrabold tracking-tight text-gray-900">Ramah</h5>
+            </div>
+            <p class="mb-3 font-normal text-darkgray text-justify">Tim kami siap melayani setiap pelanggan dengan respon
+              yang ramah dan sopan
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- card row 2 end-->
+    </div>
+  </section>
+  <!-- Kelebihan end -->
+
+  <!-- Portofolio -->
+  <section id="portfolio" class="bg-whiteblue py-24 ">
+    <div class="">
+      <div class="flex justify-center items-center flex-col mb-14">
+        <span class="bg-white text-darkcolor uppercase text-sm font-medium px-8 py-3 rounded-full">proyek</span>
+        <h1 class="font-extrabold text-mobiletitle md:text-title text-medium text-center">Portfolio</h1>
+        <p class="text-center ">Berbagai macam hasil proyek yang telah kami buat</p>
+      </div>
+
+      <div class="space-y-10">
+        <!-- content -->
+        <div class="flex justify-center items-center container mx-auto">
+          <div class="flex md:flex-row flex-col m-2 lg:m-0">
+            <div class="max-w-xl py-12 px-12 bg-white flex-col  rounded-t-xl md:rounded-l-xl md:rounded-tr-none">
+              <span class="text-darkcolor uppercase text-sm font-medium rounded-full">desain & webflow</span>
+              <h1 class="font-black text-4xl text-medium my-4">Engxzu</h1>
+              <p class="mb-28 font-normal text-darkgray text-justify ">Engxzu adalah aplikasi pembelajaran online yang
+                menyediakan tempat belajar bahasa Inggris, yang akan membantu siswa
+                untuk memecahkan masalah dalam belajar bahasa Inggris. Dengan adanya aplikasi Engxzu, Anda akan lebih
+                mudah memahami
+                berbagai materi pelajaran dan dapat diakses kapanpun dan dimanapun.</p>
+              <a href="#"
+                class="inline-flex bottom-12 items-center px-5 py-3 text-sm font-medium text-center text-white bg-darkcolor rounded-lg hover:bg-blue-500 focus:outline-none">
+                Selengkapnya
+                <svg aria-hidden="true" class="w-3.5 h-3.5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="max-w-xl bg-white flex-col">
+              <img class="rounded-b-xl md:rounded-r-xl md:rounded-bl-none " src="assets/portfolio/engxzu.png" />
+            </div>
+
+          </div>
+        </div>
+
+        <!-- content -->
+        <div class="flex justify-center items-center container mx-auto">
+          <div class="flex md:flex-row flex-col m-2 lg:m-0 ">
+            <div class="max-w-xl py-12 px-12 bg-white flex-col  rounded-t-xl md:rounded-l-xl md:rounded-tr-none">
+              <span class="text-darkcolor uppercase text-sm font-medium rounded-full">desain & webflow</span>
+              <h1 class="font-black text-4xl text-medium my-4">Engxzu</h1>
+              <p class="mb-28 font-normal text-darkgray text-justify ">Engxzu adalah aplikasi pembelajaran online yang
+                menyediakan tempat belajar bahasa Inggris, yang akan membantu siswa
+                untuk memecahkan masalah dalam belajar bahasa Inggris. Dengan adanya aplikasi Engxzu, Anda akan lebih
+                mudah memahami
+                berbagai materi pelajaran dan dapat diakses kapanpun dan dimanapun.</p>
+              <a href="#"
+                class="inline-flex bottom-12 items-center px-5 py-3 text-sm font-medium text-center text-white bg-darkcolor rounded-lg hover:bg-blue-500 focus:outline-none ">
+                Selengkapnya
+                <svg aria-hidden="true" class="w-3.5 h-3.5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="max-w-xl bg-white flex-col">
+              <img class="rounded-b-xl md:rounded-r-xl md:rounded-bl-none " src="assets/portfolio/engxzu.png" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Portofolio End -->
+
+  <!-- Tutorial Pemesanan -->
+  <section id="tutorial" class="bg-white py-20">
+    <div class="container mx-auto px-2 md:px-4">
+      <div class="flex justify-center items-center flex-col mb-14">
+        <span class="bg-whiteblue text-darkcolor uppercase text-sm font-medium px-8 py-3 rounded-full">tutorial</span>
+        <h1 class="font-extrabold text-mobiletitle md:text-title text-medium text-center">Cara Pemesanan</h1>
+        <p class="text-center">Berikut adalah proses pemasanan produk jasa yang anda inginkan</p>
+      </div>
+      <!-- row 1-->
+      <div class="flex justify-center items-center mt-5 container mx-auto">
+        <div
+          class="flex flex-col justify-center items-center xl:flex-row space-y-5 m-2 lg:m-0 md:space-y-8 md:space-x-5">
+
+          <div class="text-center max-w-[16rem]  md:space-x-7 my-3 flex justify-center items-center">
+            <div class="text-center flex justify-center items-center flex-col space-y-5">
+              <div class="bg-slightblue rounded-full px-step py-4 w-fit flex items-center">
+                <h2 class="text-blue-400 font-extrabold text-3xl">1</h2>
+              </div>
+              <div class="space-y-2">
+                <h5 class="text-2xl font-extrabold tracking-tight text-gray-900">Konsultasi Produk
+                </h5>
+                <p class="font-normal text-darkgray text-center">Tentukan paket yang sesuai dengan kebutuhan produk dari bisnis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-200 md:px-12 md:py-0.5 py-12 px-0.5 h-fit rounded-xl"></div>
+
+          <div class="text-center max-w-[16rem]  md:space-x-7 my-3 flex justify-center items-center">
+            <div class="text-center flex justify-center items-center flex-col space-y-5">
+              <div class="bg-slightblue rounded-full px-step py-4 w-fit flex items-center">
+                <h2 class="text-blue-400 font-extrabold text-3xl">2</h2>
+              </div>
+              <div class="space-y-2">
+                <h5 class="text-2xl font-extrabold tracking-tight text-gray-900">Mengirim Brief</h5>
+                <p class="font-normal text-darkgray text-center">Jelaskan keinginan produk kepada tim melalui brief agar hasil maksimal.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-200 md:px-12 md:py-0.5 py-12 px-0.5 h-fit rounded-xl"></div>
+
+          <div class="text-center max-w-[16rem]  md:space-x-7 my-3 flex justify-center items-center">
+            <div class="text-center flex justify-center items-center flex-col space-y-5">
+              <div class="bg-slightblue rounded-full px-step py-4 w-fit flex items-center">
+                <h2 class="text-blue-400 font-extrabold text-3xl">3</h2>
+              </div>
+              <div class="space-y-2">
+                <h5 class="text-2xl font-extrabold tracking-tight text-gray-900">Pembayaran</h5>
+                <p class="font-normal text-darkgray text-center">Anda dapat melakukan pembayaran sesuai dengan yang sudah disediakan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-200 md:px-12 md:py-0.5 py-12 px-0.5 h-fit rounded-xl"></div>
+
+          <div class="text-center max-w-[16rem]  md:space-x-7 my-3 flex justify-center items-center">
+            <div class="text-center flex justify-center items-center flex-col space-y-5">
+              <div class="bg-slightblue rounded-full px-step py-4 w-fit flex items-center">
+                <h2 class="text-blue-400 font-extrabold text-3xl">4</h2>
+              </div>
+              <div class="space-y-2">
+                <h5 class="text-2xl font-extrabold tracking-tight text-gray-900">Proses Pembuatan</h5>
+                <p class="font-normal text-darkgray text-center">Lakukan konfirmasi pembayaran dan kami akan lakukan
+                  proses pembuatan produk sesuai request dan kebutuhan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-200 md:px-12 md:py-0.5 py-12 px-0.5 h-fit rounded-xl"></div>
+
+          <div class="text-center max-w-[16rem]  md:space-x-7 my-3 flex justify-center items-center">
+            <div class="text-center flex justify-center items-center flex-col space-y-5">
+              <div class="bg-slightblue rounded-full px-step py-4 w-fit flex items-center">
+                <h2 class="text-blue-400 font-extrabold text-3xl">5</h2>
+              </div>
+              <div class="space-y-2">
+                <h5 class="text-2xl font-extrabold tracking-tight text-gray-900">Revisi dan Finishing</h5>
+                <p class="font-normal text-darkgray text-center">Setelah selesai akan kami kirimkan produk jasa anda dan anda
+                  dapat juga meminta revisi
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- row 1 end-->
+    </div>
+  </section>
+  <!-- Tutorial Pemesanan End -->
+
+  <section id="testimoni" class="overflow-hidden bg-whiteblue py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 gap-x-8 sm:gap-y-32 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+
+        <div class="lg:pr-8 lg:pt-16">
+          <div class="lg:max-w-lg">
+            <span
+              class="bg-white text-darkcolor uppercase text-sm font-medium  mr-2 my-6 px-8 py-3 leading-8 tracking-tight rounded-full">TERBAIK</span>
+            <p class="mt-5 text-3xl font-extrabold tracking-tight text-darkgray sm:text-5xl capitalize">mengapa harus
+              kami?</p>
+            <p class="text-lg leading-8 text-gray-600 my-6">Kami memiliki beberapa review dari customer kami </p>
+            <button class="my-4"><a href="#"
+                class="leading-7 text-darkcolor bg-white py-4 px-6 rounded-md font-medium">Hubungi Kami</a></button>
+          </div>
+        </div>
+
+        <div>
+          <div id="controls-carousel" class="relative">
+            <!-- Carousel wrapper -->
+            <div class="relative" id="testi-parent"></div>
+            <!-- All Items -->
+            <!-- Slider controls -->
+            <button type="button"
+              class="absolute top-0 left-0 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none prev-btn">
+              <span class="">
+                <iconify-icon icon="material-symbols:chevron-left-rounded" width="30" height="30"></iconify-icon>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+
+            <button type="button"
+              class="absolute top-0 right-0 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none next-btn">
+              <span class="">
+                <iconify-icon icon="material-symbols:chevron-right-rounded" width="30" height="30"></iconify-icon>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- Testimoni End -->
+
+  <!-- Faq -->
+  <section id="faq" class="py-20">
+    <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 gap-x-8 sm:gap-y-32 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+
+        <div class="lg:max-w-lg">
+          <span
+            class="bg-whiteblue text-darkcolor uppercase text-sm font-medium  mr-2 my-6 px-8 py-3 leading-8 tracking-tight rounded-full ">faq</span>
+          <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-darkgray sm:text-5xl capitalize ">frequently asked
+            questions</h1>
+        </div>
+
+        <div id="accordion-color" class="space-y-4 " data-accordion="collapse"
+          data-active-classes="bg-darkcolor dark:bg-gray-800 text-darkgray dark:text-white">
+          <div>
+            <h2 id="accordion-color-heading-1">
+              <button type="button"
+                class="bg-whiteblue flex items-center justify-between w-full p-6 font-semibold text-left text-darkgray rounded-xl  hover:bg-whiteblue "
+                data-accordion-target="#accordion-color-body-1" aria-expanded="false"
+                aria-controls="accordion-color-body-1">
+                <span>Apa itu Servirn</span>
+                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </h2>
+            <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+              <div class="p-6 font-normal bg-darkcolor text-white my-4 rounded-xl">
+                <p class="mb-2 ">Servirn adalah sebuah layanan jasa pembuatan desain dan website yang
+                  cepat, profesional dan mudah. Dengan Servirn
+                  dapat memenuhi semua kebutuhan anda mulai dari desain website, desain kalender, desain aplikasi,
+                  desain banner, desain
+                  kartu nama, desain brosur, desain label produk, desain amplop, dan jasa pembuatan website sesuai
+                  dengan kebutuhan anda.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 id="accordion-color-heading-2">
+              <button type="button"
+                class="bg-whiteblue flex items-center justify-between w-full p-6 font-semibold text-left text-darkgray rounded-xl  hover:bg-whiteblue "
+                data-accordion-target="#accordion-color-body-2" aria-expanded="false"
+                aria-controls="accordion-color-body-3">
+                <span>Berapa lama proses pembuatan desain?</span>
+                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </h2>
+            <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+              <div class="p-6 font-normal bg-darkcolor text-white my-4 rounded-xl">
+                <p class="mb-2 ">Servirn menyediakan paket-paket yang bisa anda pilih, lama pengerjaan disesuaikan dengan tenggat dari paket yang anda pilih. Apabila anda menginginkan pengerjaan desain lebih cepat, anda dapat memilih paket dengan tenggat yang lebih cepat.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 id="accordion-color-heading-3">
+              <button type="button"
+                class="bg-whiteblue flex items-center justify-between w-full p-6 font-semibold text-left text-darkgray rounded-xl  hover:bg-whiteblue "
+                data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                aria-controls="accordion-color-body-3">
+                <span>Apakah proyek saya bisa direvisi?</span>
+                <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </h2>
+            <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+              <div class="p-6 font-normal bg-darkcolor text-white my-4 rounded-xl">
+                <p class="mb-2 ">Servirn menyediakan paket-paket yang bisa anda pilih, berapa maksimal revisi ditentukan sesuai dengan paket yang anda pilih. Kami sudah memaksimalkan hasil kerja kami sesuai dengan keingin anda dari awal. Apabila anda masih belum puas dengan hasilnya, anda dapat melakukan beberapa revisi sesuai dengan paket yang anda pilih.</p>
+              </div>
+            </div>
+          </div>
+        
+
+      </div>
+    </div>
+  </section>
+  <!-- Faq End -->
+
+  <!-- Promosi 3 -->
+  <section id="promosi-3" class="bg-whiteblue py-20 sm:py-28">
+  <div class="container mx-auto">
+
+    <div class="flex justify-center items-center mt-5">
+      <div class="flex md:flex-row flex-col m-2 lg:m-0 ">
+
+        <div class="w-full py-24 px-12 bg-white flex-col rounded-xl text-center space-y-7">
+          <span
+            class="bg-whiteblue text-darkcolor uppercase text-sm font-medium  mr-2 my-6 px-8 py-3 leading-8 tracking-tight rounded-full">bantuan</span>
+          <h1 class="font-black text-mobiletitle md:text-title text-medium text-center">Tim Customer Service Kami Siap
+            untuk membantu anda!</h1>
+          <a href="#"
+            class="inline-flex items-center px-8 py-5 text-xl font-medium text-center text-white bg-darkcolor rounded-lg hover:bg-blue-500 focus:outline-none">
+            <iconify-icon icon="ic:baseline-whatsapp" width="29" height="29"></iconify-icon>&nbsp; 0896 3087 3931
+          </a>
+
+          <div class="sm:flex-row flex-col flex justify-center items-center sm:space-x-7 pt-3">
+            <div class="sm:flex items-center sm:space-x-2 py-5 sm:py-2 ">
+              <iconify-icon icon="fluent-mdl2:completed-solid" class="text-darkcolor" width="25"
+                height="25"></iconify-icon>
+              <p class="font-semibold text-darkgray">Kualitas Bagus</p>
+            </div>
+
+            <div class="sm:flex items-center sm:space-x-2 py-5 sm:py-2">
+              <iconify-icon icon="fluent-mdl2:completed-solid" class="text-darkcolor" width="25"
+                height="25"></iconify-icon>
+              <p class="font-semibold text-darkgray">Tim Profesional</p>
+            </div>
+
+            <div class="sm:flex items-center sm:space-x-2 py-5 sm:py-2">
+              <iconify-icon icon="fluent-mdl2:completed-solid" class="text-darkcolor" width="25"
+                height="25"></iconify-icon>
+              <p class="font-semibold text-darkgray">Cepat</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Promosi 3 End -->
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-12 gap-x-8 sm:gap-y-32 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="lg:max-w-lg space-y-7">
+          <div class="space-y-5">
+            <span
+              class="bg-whiteblue text-darkcolor uppercase text-sm font-medium  mr-2 my-6 px-8 py-3 leading-8 tracking-tight rounded-full ">kontak</span>
+            <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-darkgray sm:text-5xl capitalize">Hubungi Kami</h1>
+          </div>
+          <div class="space-y-4">
+            <button type="button"
+              class="text-darkcolor bg-whiteblue font-medium  rounded-xl w-3/4 py-4 mr-2 mb-2 focus:outline-none flex items-center  justify-center text-center hover:bg-blue-200 hover:text-sky-500"><iconify-icon
+                icon="ic:baseline-whatsapp" width="22" height="22"></iconify-icon>&nbsp; 0896 3087 3931 </button>
+            <button type="button"
+              class="text-darkcolor bg-whiteblue font-medium  rounded-xl w-3/4 py-4 mr-2 mb-2 focus:outline-none flex items-center  justify-center text-center hover:bg-blue-200 hover:text-sky-500"><iconify-icon
+                icon="mdi:gmail" width="22" height="22"></iconify-icon>&nbsp; servirn.official@gmail.com </button>
+          </div>
+          <div class="space-x-3">
+            <button class="bg-darkcolor  rounded-xl text-white">
+              <a href="#" class="flex items-center p-3"><iconify-icon icon="ic:baseline-facebook" width="22"
+                  height="22"></iconify-icon></a>
+            </button>
+            <button class="bg-darkcolor  rounded-xl text-white">
+              <a href="#" class="flex items-center p-3"><iconify-icon icon="mdi:instagram" width="22"
+                  height="22"></iconify-icon></a>
+            </button>
+            <button class="bg-darkcolor  rounded-xl text-white">
+              <a href="#" class="flex items-center p-3"><iconify-icon icon="mdi:twitter" width="22"
+                  height="22"></iconify-icon></a>
+            </button>
+            <button class="bg-darkcolor  rounded-xl text-white">
+              <a href="#" class="flex items-center p-3"><iconify-icon icon="ic:baseline-tiktok" width="22"
+                  height="22"></iconify-icon></a>
+            </button>
+          </div>
+        </div>
+
+        <div class="shadow-general rounded-xl p-8 sm:p-10 md:p-12 bg-white">
+          <form id="servirn_form">
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+              <div>
+                <label for="first_name" class="block mb-2 text-sm font-semibold text-gray-900 ">Nama Depan</label>
+                <input type="text" id="first_name"
+                  class=" border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-darkcolor focus:border-darkcolor block w-full px-3.5 py-2.5 "
+                  placeholder="El" name="first_name" required>
+              </div>
+              <div>
+                <label for="last_name" class="block mb-2 text-sm font-semibold text-gray-900">Nama Belakang</label>
+                <input type="text" id="last_name"
+                  class=" border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-darkcolor focus:border-darkcolor block w-full px-3.5 py-2.5"
+                  placeholder="Service" name="last_name">
+              </div>
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block mb-2 text-sm font-semibold text-gray-900 ">Email</label>
+              <input type="email" id="email"
+                class=" border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-darkcolor focus:border-darkcolor block w-full px-3.5 py-2.5"
+                placeholder="servirn.official@gmail.com" name="email" required>
+            </div>
+            <div class="mb-6">
+              <label for="phone" class="block mb-2 text-sm font-semibold text-gray-900 ">No Telepon</label>
+              <input type="number" id="phone"
+                class=" border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-darkcolor focus:border-darkcolor block w-full px-3.5 py-2.5"
+                placeholder="01xxxxxxx" name="phonenumber" required>
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block mb-2 text-sm font-semibold text-gray-900">Pesan</label>
+              <textarea id="message" rows="4"
+                class=" border-2 border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-darkcolor focus:border-darkcolor block w-full px-3.5 py-2.5"
+                placeholder="Tulis pesan anda disini ... " name="message"></textarea>
+            </div>
+            <div>
+              <label for="first_name" class="block mb-2 text-sm font-semibold text-gray-900">Jasa</label>
+              <div class="grid gap-6 mb-6 md:grid-cols-2">
+                <div>
+                  <div class="flex items-center pl-4 border-2 border-gray-200 rounded-lg">
+                    <input id="bordered-radio-1" checked type="radio" value="desain" name="bordered-radio"
+                      class="w-4 h-4 text-darkcolor  border-gray-300  " >
+                    <label for="bordered-radio-1"
+                      class="w-full py-4 ml-2 text-sm font-medium text-gray-900 ">Desain</label>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center pl-4 border-2 border-gray-200 rounded-lg ">
+                    <input id="bordered-radio-2" type="radio" value="pembuatan website" name="bordered-radio"
+                      class="w-4 h-4 text-darkcolor  border-gray-300">
+                    <label for="bordered-radio-2" class="w-full py-4 ml-2 text-sm font-medium text-gray-900">Pembuatan
+                      Website</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="text-white bg-darkcolor focus:outline-none font-medium rounded-lg text-sm w-full  px-5 py-3 text-center" id="send-btn">Send</button>
+            <div class="text-gray-400 bg-whiteblue focus:outline-none font-medium rounded-lg text-sm w-full px-5 py-3 text-center hidden" id="loading">Loading...</div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <a href="#home_pages" class="link-js bg-white shadow-chat pr-[5.1rem] pl-8 py-5 fixed right-5 bottom-5 md:right-10 md:bottom-10 rounded-4xl text-darkcolor font-medium   ">
+      Chat Kami
+      <div class="absolute -top-[0.100rem] -right-2">
+        <div class="bg-limegreen flex items-center justify-center w-[4.2rem] h-[4.2rem] rounded-full">
+          <iconify-icon icon="ic:baseline-whatsapp" class="text-white" width="40" height="40"></iconify-icon>
+        </div>
+      </div>
+    </a>
+  </section>
+  <!-- Contact End -->
+
+  
+  <!-- Footer -->
+  <footer class="bg-darkcolor ">
+    <div class="grid grid-cols-1 gap-8 container mx-auto py-20 md:grid-cols-4 px-2 md:px-4">
+      <div>
+        <h2 class="mb-5 text-lg font-bold text-white">Jasa</h2>
+        <ul class="text-white">
+          <li class="mb-4">
+            <a href="/pages/website.html" class=" hover:underline">Jasa Pembuatan Web</a>
+          </li>
+          <li class="mb-4">
+            <a href="/pages/design.html" class="hover:underline">Jasa Desain</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h2 class="mb-5 text-lg font-bold text-white">Jasa Desain</h2>
+        <ul class="text-white ">
+          <li class="mb-4">
+            <a href="/pages/design/website.html" class="hover:underline"> Website</a>
+          </li>
+          <li class="mb-4">
+            <a href="/pages/design/kalender.html" class="hover:underline"> Kalender</a>
+          </li>
+          <li class="mb-4">
+            <a href="/pages/design/aplikasi.html" class="hover:underline"> Aplikasi</a>
+          </li>
+          <li class="mb-4">
+            <a href="/pages/design/banner.html" class="hover:underline"> Banner</a>
+          </li>
+          <li class="mb-4">
+            <a href="/pages/design/kartunama.html" class="hover:underline"> Kartu Nama</a>
+          </li>
+          <li class="mb-4">
+            <a href="/pages/design/brosur.html" class="hover:underline"> Brosur</a>
+          </li>
+          <li class="mb-4">
+            <a href="/pages/design/labelproduk.html" class="hover:underline"> Label Produk</a>
+          </li>
+          <li class="mb-4">
+            <a href="/pages/design/amplop.html" class="hover:underline"> Amplop</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="mb-5 text-lg font-bold text-white">Kontak</h2>
+        <ul class="text-white ">
+          <li class="mb-4">
+            <a href="#" class="hover:underline">servirn.official@gmail.com</a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="hover:underline">Instagram</a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="hover:underline">Twitter</a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="hover:underline">Facebook</a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="hover:underline">Whatsapp</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="mb-5 text-lg font-bold text-white">Bantuan</h2>
+        <ul class="text-white ">
+          <li class="mb-4">
+            <a href="#faq" class="hover:underline">FAQ</a>
+          </li>
+          <li class="mb-4">
+            <a href="#contact" class="hover:underline">Kontak</a>
+          </li>
+          <li class="mb-4">
+            <a href="#" class="hover:underline">Chat Whatapp</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="mt-6 border-gray-300 sm:mx-auto container w-full" />
+    <div class="container mx-auto px-2 md:px-4 py-10 bg-darkcolor md:flex md:items-center md:justify-between">
+      <img src="assets/blackbrand.png" class="w-32" alt="brand">
+      <h4 class="text-white ">Copyright @2023 elseservice</h4>
+      <div class="flex mt-4 space-x-3 sm:justify-center md:mt-0">
+        <button class="bg-white  rounded-xl text-darkcolor">
+          <a href="#" class="flex items-center p-3"><iconify-icon icon="ic:baseline-facebook" width="22"
+              height="22"></iconify-icon></a>
+        </button>
+        <button class="bg-white  rounded-xl text-darkcolor">
+          <a href="#" class="flex items-center p-3"><iconify-icon icon="mdi:instagram" width="22"
+              height="22"></iconify-icon></a>
+        </button>
+        <button class="bg-white  rounded-xl text-darkcolor">
+          <a href="#" class="flex items-center p-3"><iconify-icon icon="mdi:twitter" width="22"
+              height="22"></iconify-icon></a>
+        </button>
+        <button class="bg-white  rounded-xl text-darkcolor">
+          <a href="#" class="flex items-center p-3"><iconify-icon icon="ic:baseline-tiktok" width="22"
+              height="22"></iconify-icon></a>
+        </button>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  
+  <script type="module" src="dist/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+</body>
+</html>
