@@ -25,32 +25,34 @@ const nextBtn = document.querySelector('.next-btn');
 container.appendChild(parent);
 
 parent.innerHTML = `
-    <div class="">
-        <div class="flex justify-center items-center w-full h-full flex-col">
-        <div class="bg-white relative border-2 border-gray-100 h-full w-9/12 md:w-10/12 md:space-y-3 space-y-2  rounded-xl">
-            <div class="p-4 sm:p-7 md:space-y-3 space-y-2">
-            <div class="bg-slightblue rounded-full p-1.5 w-fit flex items-center break-words">
-                <img
-                src="${data[0].profile}"
-                class="rounded-full w-10 md:w-14 img_testi" />
-            </div>
-            <h2 class="font-extrabold sm:text-3xl text-xl name_testi">${data[0].name}</h2>
-            <div class="text-md sm:text-xl content_testi">${data[0].testi}
-            </div>
-            </div>
+  <div class="">
+      <div class="flex justify-center items-center w-full h-full flex-col">
+      <div class="bg-white relative border-2 border-gray-100 h-full w-9/12 md:w-10/12 md:space-y-3 space-y-2  rounded-xl">
+          <div class="p-4 sm:p-7 md:space-y-3 space-y-2">
+          <div class="bg-slightblue rounded-full p-1.5 w-fit flex items-center break-words">
+              <img
+              src="${data[0].profile}"
+              class="rounded-full w-10 md:w-14 img_testi" />
+          </div>
+          <h2 class="font-extrabold sm:text-3xl text-xl name_testi">${data[0].name}</h2>
+          <div class="text-md sm:text-xl content_testi">${data[0].testi}
+          </div>
+          </div>
 
-            <div class="w-full">
-            <div class="w-full p-4 md:p-7">
-                <div class="flex flex-col sm:flex-row items-center justify-between">
-                <p class="text-md sm:text-xl font-extrabold date_testi">${data[0].date}</p>
-                <img src="./../../assets/brand.png" class="h-6 sm:h-7 mr-3" alt="Servirn logo">
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
+          <div class="w-full">
+          <div class="w-full p-4 md:p-7">
+              <div class="flex flex-col sm:flex-row items-center justify-between">
+              <p class="text-md sm:text-xl font-extrabold date_testi">${data[0].date}</p>
+              <img src="./../../assets/brand.png" class="h-6 sm:h-7 mr-3" alt="Servirn logo">
+              </div>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
 `
+
+// testimonial
 const testiImg = document.querySelector('.img_testi');
 const testiName = document.querySelector('.name_testi');
 const testiContent = document.querySelector('.content_testi');
@@ -106,12 +108,18 @@ form.forEach(el => {
         loadingEl.classList.toggle("hidden");
         sendBtn.classList.toggle("hidden");
       } )
-
-
   });
 })
 
-// testimonial
 
-
+// chat kami 
+const chatKamiBtn = document.querySelector("#chat-btn")
+let space_string,
+line_break,
+wa_url;
+const noteText = chatKamiBtn.getAttribute("note")
+space_string = noteText.replace(/ /g, "%20");
+line_break = space_string.replace(/(\r\n|\n|\r)/gm, "%0A");
+wa_url = `https://wa.me/62089636406145?text=${line_break}`
+chatKamiBtn.href = wa_url
 
