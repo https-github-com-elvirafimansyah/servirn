@@ -41,6 +41,14 @@ const data_gambar = [
     theme: "Edgar",
     note: 'Selamat pagi/siang/malam, saya mau pesan/order desain website - tema Edgar?'
   },
+  {
+    id: "6",
+    url: "../../assets/portfolio/website/dweb6.png",
+    category: "website", 
+    type: "harizontal",
+    theme: "Frezz",
+    note: 'Selamat pagi/siang/malam, saya mau pesan/order desain website - tema Frezz?'
+  },
 ]
 
 const porto_gambar = document.getElementById("porto_gambar");

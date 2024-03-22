@@ -45,7 +45,8 @@ const data_gambar = [
     theme: "",
     link: "https://eldesign3.netlify.app/",
     note: 'Selamat pagi/siang/malam, saya mau pesan/order desain kalender - tema Azure?'
-  }
+  },
+  
 ]
 
 const porto_gambar = document.getElementById("porto_gambar");
